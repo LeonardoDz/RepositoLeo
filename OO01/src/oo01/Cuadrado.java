@@ -14,12 +14,14 @@ public class Cuadrado {
          float LadosMedidas;   
          float Perimetro;
                float Area;  
-               
-
+           float Comida;    
+           float Coman;
+float Abran;
 public Cuadrado (){
     Lados = 4;
     LadosMedidas=15;
     Perimetro=Lados*LadosMedidas;
     Area=LadosMedidas*LadosMedidas;
+
 }
 }

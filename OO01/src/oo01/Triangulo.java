@@ -12,18 +12,29 @@ package oo01;
 public class Triangulo {
     int CLados;
     int LadosMedidas[];
-    float LadoBase;
     float Perimetro;
-            float Area;
-            float Altura;
-       public Triangulo(){
+    float Altura;
+    float CalculoAltura;
+    float CalculoAlturaBaseB;
+    float CalculoAlturaBaseA;
+    float CalculoAlturaB;
+    float CalculoAlturaC;
+    public Triangulo(){
     CLados = 3;
-    LadosMedidas = new int[2];
-    LadosMedidas[0]=7;
-    LadosMedidas[1]=7;
-   LadosMedidas[2]=7;
-            Altura=9;
+    LadosMedidas = new int[3];
+    LadosMedidas[0] = 14;
+    LadosMedidas[1] = 14;
+    LadosMedidas[2] = 14;
+    CalculoAltura=(int) Math.pow(LadosMedidas[0], 2);
+    CalculoAlturaBaseA=LadosMedidas[1] /2;
+    CalculoAlturaBaseB=(int) Math.pow(CalculoAlturaBaseA, 2);
+    CalculoAlturaB=CalculoAltura - CalculoAlturaBaseB;
+    CalculoAlturaC=(float) Math.sqrt(CalculoAlturaB);
+Perimetro=LadosMedidas[1]*3;
+    }
     
-            
-}     
+   
+    
+       
+       
 }
