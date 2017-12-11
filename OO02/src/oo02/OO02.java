@@ -59,19 +59,17 @@ public class OO02 extends JFrame {
                                          
                                                  
                                });
-                                  JButton crearImagen3 = new JButton("Agregar triangulo");
+                                  JButton crearImagen3 = new JButton("Agregar Rectangulo");
                                          crearImagen3.setBounds(240,0,180,30);
                                          crearImagen3.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e){
 					int x = (int)(panelGrafico.getWidth() * Math.random());
-                                        int x2=x+10;
-                                        int x3=x2+10;
-					int y = (int)(panelGrafico.getWidth() * Math.random());
-					int y2=y-80;
-                                        int y3=y2+80;
+                                        int x2=(int)(panelGrafico.getWidth() * Math.random());
+                                        int x3=100;
+					int x4 =200;
                                         Color color=colors[(int)(Math.random()*colors.length)];
-					Triangulo u = new Triangulo(x,x2,x3,y,y2,y3,color); 
-					panelGrafico.addTriangulo(u);
+					Rectangulo z = new Rectangulo(x,x2,x3,x4,color); 
+					panelGrafico.addRectangulo(z);
                                 }
                                          
                                                  
