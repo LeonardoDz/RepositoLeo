@@ -13,61 +13,32 @@ import java.awt.Graphics;
 
 public class Triangulo {
  
- int alto=0;
- int base=0;
- int x=0;
- int y=0;
+ private int x;
+ private int y;
+ private int y2;
+ private int y3;
+ private int x2;
+ private int x3;
  private Color color;
- public Triangulo(int x, int y, int a,int b,Color color){
-  alto=a;
-  base=b;
+ 
+ public Triangulo(int x,int x2,int x3 ,int y,int y2,int y3,Color color){
+  this.x2=x2;
+  this.x3=x3;
+  this.x=x;
+  this.y=y;
+  this.y2=y2;
+  this.y3=y3;
   this.color=color;
  }
  
- public void pintar(Graphics g){
-     g.setColor(color);
-  if(base!=0 && alto!=0){
-   g.drawLine(x, y, x+(base/2), y+alto);
-   g.drawLine(x+(base/2), y+alto, x-(base/2), y+alto);
-   g.drawLine(x,y,x-(base/2), y+alto);
+ public void Dibujar(Graphics g){
+    g.setColor(color);
+    int[] x = new int[]{this.x,this.x2,this.x3};
+    int[] y = new int[]{this.y, this.y2, this.y3};
+    g.fillPolygon (x, y, x.length);    
   }
- }
-
- public int getAlto() {
-  return alto;
- }
-
- public void setAlto(int alto) {
-  this.alto = alto;
- }
-
- public int getBase() {
-  return base;
- }
-
- public void setBase(int base) {
-  this.base = base;
- }
-
- public int getX() {
-  return x;
- }
-
- public void setX(int x) {
-  this.x = x;
- }
-
- public int getY() {
-  return y;
- }
-
- public void setY(int y) {
-  this.y = y;
- }
-
-    void Dibujar(Graphics g) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
+
+ 
     
 
