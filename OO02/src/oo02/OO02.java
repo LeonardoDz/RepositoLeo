@@ -35,9 +35,10 @@ public class OO02 extends JFrame {
 					int y = (int) (Math.random() * 530) + 80;
                                         Color color=colors[(int)(Math.random()*colors.length)];
 					Circulo q = new Circulo(x,y,dx,dy,color); 
+                                        
 					panelGrafico.addCirculo(q);
-                                   
-                                    }      
+                                        
+                                    }      repaint();
                                 }
                                 
                                 });
@@ -102,12 +103,22 @@ public class OO02 extends JFrame {
 					panelGrafico.deleteRectangulo();
                                         repaint();
                                 }
+                                         });  
+                                            JButton borrarultima = new JButton("Borrar ultima figura");
+                                         borrarultima.setBounds(240,60,180,30);
+                                         borrarultima.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					panelGrafico.deleteultimo();
+                                        repaint();
+                                }
                                          
                                                  
+                                    
                                }); 
                         add(borrarimagen1);  
                         add(borrarimagen2);
                         add(borrarimagen3);
+                        add(borrarultima);
 		        add(crearImagen);
 	                add(crearImagen2);
                         add(crearImagen3);
