@@ -44,5 +44,17 @@ public class CirculoGraph extends JPanel {
 			z.Dibujar(g);
 	}
         }
+        public void deletecirculo(){
+            circulos .remove(circulos.size() - 1);
+            
+        }
+ public void deletetriangulo(){
+            Triangulo .remove(Triangulo.size() - 1);
+            
+        }
+ public void deleteRectangulo(){
+            Rectangulo .remove(Rectangulo.size() - 1);
+            
+        }
 
 }

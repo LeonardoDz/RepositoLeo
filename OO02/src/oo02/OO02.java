@@ -31,8 +31,8 @@ public class OO02 extends JFrame {
                                     if (e.getSource()==crearImagen) {
 					int dx = 50;
 					int dy = 50;
-					int x = (int)(panelGrafico.getWidth() * Math.random());
-					int y = (int)(panelGrafico.getWidth() * Math.random());
+					int x = (int)(Math.random() * 600) + 1;
+					int y = (int) (Math.random() * 530) + 80;
                                         Color color=colors[(int)(Math.random()*colors.length)];
 					Circulo q = new Circulo(x,y,dx,dy,color); 
 					panelGrafico.addCirculo(q);
@@ -46,15 +46,15 @@ public class OO02 extends JFrame {
                                          crearImagen2.setBounds(480,0,180,30);
                                          crearImagen2.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e){
-					int x = (int)(panelGrafico.getWidth() * Math.random());
+					int x = (int)(Math.random() * 600) + 1;
                                         int x2=x+10;
                                         int x3=x2+10;
-					int y = (int)(panelGrafico.getWidth() * Math.random());
-					int y2=y-80;
-                                        int y3=y2+80;
+					int y = (int) (Math.random() * 530) + 120;
+					int y2=y-40;
+                                        int y3=y2+40;
                                         Color color=colors[(int)(Math.random()*colors.length)];
-					Triangulo u = new Triangulo(x,x2,x3,y,y2,y3,color); 
-					panelGrafico.addTriangulo(u);
+					Triangulo q = new Triangulo(x,x2,x3,y,y2,y3,color); 
+					panelGrafico.addTriangulo(q);
                                 }
                                          
                                                  
@@ -63,17 +63,51 @@ public class OO02 extends JFrame {
                                          crearImagen3.setBounds(240,0,180,30);
                                          crearImagen3.addActionListener(new ActionListener(){
 				public void actionPerformed(ActionEvent e){
-					int x = (int)(panelGrafico.getWidth() * Math.random());
-                                        int x2=(int)(panelGrafico.getWidth() * Math.random());
-                                        int x3=100;
-					int x4 =200;
+					int x = (int) (Math.random() * 600) + 1;
+                                        int x2=(int) (Math.random() * 550) + 80;
+                                        int x3=50;
+					int x4 =25;
                                         Color color=colors[(int)(Math.random()*colors.length)];
-					Rectangulo z = new Rectangulo(x,x2,x3,x4,color); 
-					panelGrafico.addRectangulo(z);
+					Rectangulo q = new Rectangulo(x,x2,x3,x4,color); 
+					panelGrafico.addRectangulo(q);
                                 }
                                          
                                                  
                                });       
+                                         JButton borrarimagen1 = new JButton("Borrar ultimo circulo");
+                                         borrarimagen1.setBounds(10,40,180,30);
+                                         borrarimagen1.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+                                   panelGrafico.deletecirculo();
+                                
+                                   repaint();
+                                }
+                                         
+                                                 
+                               }); 
+                                                   JButton borrarimagen2 = new JButton("Borrar ultimo Triangulo");
+                                         borrarimagen2.setBounds(480,40,180,30);
+                                         borrarimagen2.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					panelGrafico.deletetriangulo();
+                                        repaint();
+                                }
+                                         
+                                                 
+                               }); 
+                                         JButton borrarimagen3 = new JButton("Borrar ultimo rectangulo");
+                                         borrarimagen3.setBounds(240,40,180,30);
+                                         borrarimagen3.addActionListener(new ActionListener(){
+				public void actionPerformed(ActionEvent e){
+					panelGrafico.deleteRectangulo();
+                                        repaint();
+                                }
+                                         
+                                                 
+                               }); 
+                        add(borrarimagen1);  
+                        add(borrarimagen2);
+                        add(borrarimagen3);
 		        add(crearImagen);
 	                add(crearImagen2);
                         add(crearImagen3);
