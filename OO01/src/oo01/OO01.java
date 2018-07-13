@@ -17,12 +17,12 @@ public class OO01 {
     public static void main(String[] args  ) {
         Circulo circulo = new Circulo();
         Circulo circulo2=new Circulo();
-        circulo2.setradios(10);
         System.out.print("CIRCULO cantidad de Lados: " + circulo.getcantLados() + "\n");
         System.out.print("CIRCULO circurfencia:"+circulo.getCircurferencia()+"\n");
         System.out.print("CIRCULO circurfencia:"+circulo2.getCircurferencia()+"\n");
         //Imprimir el resto de las propiedades del objeto Circulo.
-        
+       
+        //weeee ya me canse de estoooo
         //Crear una clase Cuadrado, con 6 propiedades
         //Instanciar la clas
         //Imprimir sus propiedades
